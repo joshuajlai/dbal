@@ -387,4 +387,12 @@ class MasterSlaveConnection extends Connection
 
         return parent::prepare($statement);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isConnected()
+    {
+        return $this->_conn == null;
+    }
 }
